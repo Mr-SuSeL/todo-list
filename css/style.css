@@ -5,3 +5,8 @@ html {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+
+.body__container {
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+}

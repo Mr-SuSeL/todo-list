@@ -11,12 +11,31 @@
     <script defer src="js/script.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="body__container">
+   <header>
+    <h1>Lista zadań</h1>
+   </header> 
+
+   <section>
+    <h2>Dodaj nowe zadanie</h2>
     <form class="js-form">
-        <input class="js-newTask">
+        <input class="js-newTask" placeholder = "Co jest do zrobienia?" autofocus>
         <button>Dodaj zadanie</button>
     </form>
+   </section>
 
-    <ul class="js-tasks"></ul>
+   <section>
+    <p>
+        <h2>Lista zadań</h2>
+    </p>
+    <p>
+        <ul class="js-tasks"></ul>
+    </p>
+
+   </section>
+
+
+
+ 
 </body>
 </html>
