@@ -10,3 +10,7 @@ html {
     margin: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.list__item--done {
+    text-decoration: line-through;
+}
