@@ -28,6 +28,25 @@
       render();
     }
 
+const bindEvents = () => {
+  
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, index) => {
+          removeButton.addEventListener("click", () => {
+            removeTask(index);
+          });
+        });
+
+        const toggleDonebuttons = document.querySelectorAll(".js-done");
+
+        toggleDonebuttons.forEach((toggleDoneButton, index) => {
+          toggleDoneButton.addEventListener("click", () => {
+            toggleTaskDone(index);
+          });
+        });
+}
+
     const render = () => {
         let htmlString = "";
 
@@ -44,21 +63,8 @@
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        const removeButtons = document.querySelectorAll(".js-remove");
+        bindEvents();
 
-        removeButtons.forEach((removeButton, index) => {
-          removeButton.addEventListener("click", () => {
-            removeTask(index);
-          });
-        });
-
-        const toggleDonebuttons = document.querySelectorAll(".js-done");
-
-        toggleDonebuttons.forEach((toggleDoneButton, index) => {
-          toggleDoneButton.addEventListener("click", () => {
-            toggleTaskDone(index);
-          });
-        });
 
     };
 
@@ -68,11 +74,7 @@
       thisfield.value = "";
     };
 
-    // function eraseInput() {
-    //     const inputToErase = doument.querySelector(".js-newTask");
-    //     inputToErase.value = "";
-
-    // };
+ 
     const onFormSubmit = (event) => {
       event.preventDefault();
 
@@ -83,7 +85,6 @@
         return;
       }
       addNewTask(newTaskContent);
-      // eraseInput();
 
     };
 
