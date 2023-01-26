@@ -70,24 +70,6 @@ const bindEvents = () => {
 
     };
 
-
-
-    // function eraseInput(thisfield) {
-    //   thisfield.value = "";
-    // };
-
-  //   const onFormSubmit = (event) => {
-  //     event.preventDefault();
-  //     const newTaskElement = document.querySelector(".js-newTask");
-
-  //     if (!newTaskElement.value.trim()) {
-  //         newTaskElement.value = "";
-  //         return newTaskElement.focus();
-  //     }
-
-  //     addNewTask(newTaskElement);
-  //     return newTaskElement.focus();
-  // };
  
     const onFormSubmit = (event) => {
       event.preventDefault();
