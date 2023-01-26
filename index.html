@@ -13,27 +13,29 @@
 </head>
 <body class="body__container">
    <header>
-    <h1>Lista zadań</h1>
+    <h1 class="header__heading">Lista zadań</h1>
    </header> 
 
-   <section>
-    <h2>Dodaj nowe zadanie</h2>
+<article class="article__container">
+   <!-- <section class="section__container"> -->
+    <section>
+    <h2 class="section__heading">Dodaj nowe zadanie</h2>
     <form class="js-form">
-        <input class="js-newTask" onclick="eraseInput(this)" placeholder = "Co jest do zrobienia?" autofocus>
-        <button>Dodaj zadanie</button>
+        <input class="js-newTask flex__item" onclick="eraseInput(this)" placeholder = "Co jest do zrobienia?" autofocus>
+        <button class="button__task flex__item">Dodaj zadanie</button>
     </form>
    </section>
 
    <section>
     <p>
-        <h2>Lista zadań</h2>
+        <h2 class="section__heading--second">Lista zadań</h2>
     </p>
     <p>
         <ul class="js-tasks"></ul>
     </p>
 
    </section>
-
+</article>
 
 
  

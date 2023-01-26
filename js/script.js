@@ -55,9 +55,10 @@ const bindEvents = () => {
                 <li
                   class="list__item${task.done ? " list__item--done" : ""}"
                 >
-                  <button class = "js-done">zrobione?</button>
-                  <button class = "js-remove">usuń</button>
-                    ${task.content}
+                  <button class = "js-done grid__item grid__item--left">${task.done ? "✔" : ""}</button>
+                  <div class="js-text grid__item grid__item--center">${task.content}</div>
+                  <button class = "js-remove grid__item grid__item--right">🗑</button>
+                  
                 </li>
             `;
         }
@@ -74,6 +75,18 @@ const bindEvents = () => {
       thisfield.value = "";
     };
 
+  //   const onFormSubmit = (event) => {
+  //     event.preventDefault();
+  //     const newTaskElement = document.querySelector(".js-newTask");
+
+  //     if (!newTaskElement.value.trim()) {
+  //         newTaskElement.value = "";
+  //         return newTaskElement.focus();
+  //     }
+
+  //     addNewTask(newTaskElement);
+  //     return newTaskElement.focus();
+  // };
  
     const onFormSubmit = (event) => {
       event.preventDefault();
