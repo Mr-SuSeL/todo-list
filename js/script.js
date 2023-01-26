@@ -45,6 +45,7 @@ const bindEvents = () => {
             toggleTaskDone(index);
           });
         });
+        document.querySelector(".js-newTask").value = "";
 }
 
     const render = () => {
@@ -71,9 +72,9 @@ const bindEvents = () => {
 
 
 
-    function eraseInput(thisfield) {
-      thisfield.value = "";
-    };
+    // function eraseInput(thisfield) {
+    //   thisfield.value = "";
+    // };
 
   //   const onFormSubmit = (event) => {
   //     event.preventDefault();

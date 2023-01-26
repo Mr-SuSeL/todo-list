@@ -119,11 +119,12 @@ html, ::after, ::before {
 .list__item {
     display: grid;
     grid-template-columns: 70px 1fr 70px;
-    align-items: center;
+    /* align-items: center; */
     padding: 20px;
-    /* margin-bottom: 20px;
-    padding: 0 0 20px 0;
-    border-bottom: solid #ddd 2px; */
+    margin: 0 20px 20px 20px;
+    /* grid-gap: 20px; */
+    border-bottom: 2px solid #ddd;
+    /* grid-row-gap: 10px; */
 }
 
 .grid__item {
@@ -131,12 +132,14 @@ html, ::after, ::before {
     align-items: center;
     /* justify-content: center; */
     /* border: 1px solid black; */
-    padding: 20px;
+    /* padding: 20px; */
     /* border-bottom: 2px solid #ddd; */
-    border-bottom: 2px solid #ddd; 
+
 }
 
-
+/* ul > li {
+    border-bottom: 2px solid #ddd;
+} */
 
 /* .section__container {
     background-color: #fff;
@@ -164,15 +167,18 @@ html, ::after, ::before {
 .js-tasks {
     list-style: none;
     padding: 0px;
+    /* border-bottom: 2px solid #ddd; */
+    
 
 }
 
 .button__task {
-    background-color: hsl(180, 100%, 30%);
+    background-color: hsl(180, 100%, 25%);
     color: white;
     padding: 10px 15px;
     cursor: pointer;
     border: none;
+
 }
 
 .button__task:hover {
@@ -188,6 +194,11 @@ html, ::after, ::before {
     cursor: pointer;
     border: none;
     background-color: hsl(122, 59%, 40%);
+
+}
+
+.grid__item--left:hover {
+    background-color: hsl(122, 59%, 50%);
 }
 
 .grid__item--right {
@@ -200,6 +211,10 @@ html, ::after, ::before {
     cursor: pointer;
     border: none;
     background-color: hsl(0, 89%, 42%);
+}
+
+.grid__item--right:hover {
+    background-color: hsl(0, 89%, 52%);
 }
 
 .grid__item--center {
