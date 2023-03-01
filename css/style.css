@@ -96,8 +96,32 @@ html {
 
 .list__item--done > .grid__item--center {
     text-decoration: line-through;
- 
 }
+
+
+
+   
+
+.section__heading__finishButton {
+    cursor: pointer;
+}
+
+.section__heading__hideButton {
+    cursor: pointer;
+}
+
+.section__heading__finishButton:disabled {
+    color: #dddddd;
+    cursor:default;
+  }
+
+  .section__heading__finishButton:disabled.section__heading__finishButton:hover {
+    color: #ddd;
+    cursor:default;
+    
+}
+
+
 
 .js-tasks {
     list-style: none;
@@ -114,6 +138,35 @@ html {
 
 .button__task:hover {
     background-color: hsl(180, 100%, 40%);
+}
+
+
+.buttonEmptyTasksTab {
+    display: none;
+}
+
+.taskList--hidden {
+    display: none;
+}
+
+.section__heading__hideButton {
+    background: none;
+    border: none;
+    color: hsl(180, 98%, 26%);
+}
+
+.section__heading__hideButton:hover {
+    color: hsl(180, 50%, 26%);
+}
+
+.section__heading__finishButton {
+    background: none;
+    border: none;
+    color: hsl(180, 98%, 26%);
+}
+
+.section__heading__finishButton:hover {
+    color: hsl(180, 50%, 26%);
 }
 
 .grid__item--left {
