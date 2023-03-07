@@ -11,7 +11,7 @@
     },
   ];
 
-  let hideDoneTasks = false; //jakaś funckja boolean która przełączy flagę
+  let hideDoneTasks = false; 
 
   const addNewTask = (newTaskContent) => {
     tasks = [
@@ -26,27 +26,20 @@
       ...tasks.slice(0, taskIndex),
       ...tasks.slice(taskIndex + 1),
     ];
-    //tasks.slice(taskIndex, 1);
-    //splice było WTF
+
     render();
   };
 
-  // const toggleAllTuskDone = () => {
-  //   const allTasks = ({ done }) => done === true;
-  //   //oznacza wszystkie zadania jako ukończone - map
-  // };
-
   const toggleTaskDone = (taskIndex) => {
-    //tasks[taskIndex].done = !tasks[taskIndex].done;
-    //tasks = tasks.map((task, index) => index === taskIndex ? {...task, done: !task.done } : task);
+
     tasks = [
       ...tasks.slice(0, taskIndex),
       {
-          ...tasks[taskIndex],
-          done: !tasks[taskIndex].done,
+        ...tasks[taskIndex],
+        done: !tasks[taskIndex].done,
       },
       ...tasks.slice(taskIndex + 1),
-  ];
+    ];
     render();
   };
 
@@ -75,42 +68,28 @@
   const bindButtonsEvents = () => {
     const toggleAllTaskDoneButton = document.querySelector(".js-buttonFinishAll");
     const buttonHideDone = document.querySelector(".js-buttonHideDone");
-    
-    if(tasks.length) {
+
+    if (tasks.length) {
       toggleAllTaskDoneButton.addEventListener("click", () => {
 
-          tasks = tasks.map((task) => ({ ...task, done: true }));
+        tasks = tasks.map((task) => ({ ...task, done: true }));
 
-          render();
-        });
+        render();
+      });
 
-        buttonHideDone.addEventListener("click", () => {
-          hideDoneTasks = !hideDoneTasks;
-          render();
-        });
+      buttonHideDone.addEventListener("click", () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+      });
 
-      };
+    };
 
   };
 
 
-
-  //Dodaj niżej klasę która ukryje w CSS tasksItem__hidden za pomocą diplay: none ukryć przyciski
-  //wyłączony przycisk ma mieć atrybut disabled dodany lub nie przy warunku
   const renderTasks = () => {
     let htmlString = "";
 
-
-  //   <li
-  //   class="list__item${task.done && hideDoneTasks ? " list__item--done" : ""}"
-  // >
-  //zamienione na:
-//   <li
-//   class="list__item${task.done && hideDoneTasks ? " list__item--done taskList--hidden" : ""}"
-// >
-
-
-    //tu nad divem chyba trzeba dopisać warunek
     for (const task of tasks) {
       htmlString += `
         <li
@@ -128,20 +107,20 @@
     document.querySelector(".js-tasks").innerHTML = htmlString;
   };
 
-  const renderButtons = () => { 
+  const renderButtons = () => {
 
     let htmlString = "";
 
     if (!tasks.length) {
-    htmlString = `
+      htmlString = `
       <button class="buttonEmptyTasksTab"></button>
       <button class="buttonEmptyTasksTab"></button>
       `;
       document.querySelector(".js-tasksButtons").innerHTML = htmlString;
     }
-      else {
+    else {
 
-    htmlString += `
+      htmlString += `
       <button class="js-buttonHideDone section__heading__hideButton">
       ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone zadania
       </button>
@@ -151,21 +130,9 @@
       </button>
     `;
 
-    document.querySelector(".js-tasksButtons").innerHTML = htmlString;
+      document.querySelector(".js-tasksButtons").innerHTML = htmlString;
     }
   };
-
-
-  //   const toggleAllTasksDoneButtonName = () => {
-  //     const allTasksChecked = tasks.every((tasks) => tasks.done === true);
-  
-  //     if (allTasksChecked) {
-  //       toggleAllTaskDoneButton.disabled = true;
-  //     } else {
-  //       toggleAllTaskDoneButton.disabled = false;
-  //     }
-  // };
-
 
   const render = () => {
 
@@ -175,8 +142,6 @@
     bindEvents();
 
     bindButtonsEvents();
-    // toggleAllTasksDoneButtonName();
-
   };
 
 
@@ -190,7 +155,6 @@
       return;
     }
     addNewTask(newTaskContent);
-
   };
 
   const init = () => {
