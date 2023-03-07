@@ -134,10 +134,14 @@ html {
     padding: 10px 15px;
     cursor: pointer;
     border: none;
+    transition: transform 1s;
+    transition-timing-function:cubic-bezier(0.75, 0.14, 0.59, 1.03);
 }
 
 .button__task:hover {
     background-color: hsl(180, 100%, 40%);
+    transform: scale(1.15);
+   
 }
 
 
@@ -156,7 +160,8 @@ html {
 }
 
 .section__heading__hideButton:hover {
-    color: hsl(180, 50%, 26%);
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
 }
 
 .section__heading__finishButton {
@@ -166,7 +171,8 @@ html {
 }
 
 .section__heading__finishButton:hover {
-    color: hsl(180, 50%, 26%);
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
 }
 
 .grid__item--left {
